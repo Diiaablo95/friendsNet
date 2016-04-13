@@ -1,0 +1,12 @@
+cd ..;
+cd ..;
+python -m test.database_api_test_comments;
+python -m test.database_api_test_conversations;
+python -m test.database_api_test_friendships;
+python -m test.database_api_test_groups;
+python -m test.database_api_test_media_items;
+python -m test.database_api_test_messages;
+python -m test.database_api_test_rates;
+python -m test.database_api_test_statuses;
+python -m test.database_api_test_tags;
+python -m test.database_api_test_users;

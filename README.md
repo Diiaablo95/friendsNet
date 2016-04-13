@@ -1,5 +1,9 @@
 #friendsNet APIs
 
+## DOCUMENTATION
+
+Link to documentation: <a href = "http://docs.friendsnetapis.apiary.io/#">Apiary.io</a>
+
 ## GENERAL DESCRIPTION
 
 The main aim of the friendsNet social network web APIs is to <strong>allow people from different places to get in touch each other</strong>. People have to register and successively log into the platform in order to be able to use its functionalities providing an email and a password.

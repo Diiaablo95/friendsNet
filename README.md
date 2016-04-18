@@ -37,9 +37,9 @@ When <strong>searching another user</strong>, the user can provide any of this e
 
 sqlite3 is used to handle database, so it's required to have an executable with which launching the scripts for database schema and data creation.
 
-The modules needed in order to start the service are described in <strong>Utilities/Service_requirements.txt</strong> file. Suggestion is to set up a virtual environment where to install the components and then run the server from within the virtual environment itself.
+The modules needed in order to start the service are described in <strong>Utilities/Service_requirements.txt</strong> file. Suggestion is to run the server from within the virtual environment itself which contains already all the needed packages installes. To do that, just go to the project root directory and type <code>. venv/bin/activate</code> to activate the virtual environment and then run the server from within the virtual environment. Once finished, just stop the server with CTRL+c and type <code>deactivate</code> to get out from the virtual environment.
 
-If using <i><strong>pip</strong></i> in the virtual environment just type, from within the folder <strong>Utilities</strong>, the following line of code: <code>pip install -r Service_requirements.txt</code> to install all of the required components.
+If using <i><strong>pip</strong></i> in the virtual environment just type, from within the folder <strong>Utilities</strong>, the following line of code: <code>pip install -r Service_requirements.txt</code> to install all of the required components. If you're not using the virtual environment (this option is dangerous though) then use the shell as root (with <code>sudo bash</code> command on UNIX systems) and do the same operation to install dependences from the text file.
 
 ## LAUNCHING THE SERVICE
 

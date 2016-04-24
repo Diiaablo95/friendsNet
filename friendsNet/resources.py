@@ -384,7 +384,7 @@ class User_conversations(Resource):
                 resp = bad_request(parameter_name = "User id")                            #If anything wrong (due to bad request format), then error
         return resp
 
-##################### USER CREDENTIALS #####################
+##################### USER AUTHENTICATION #####################
 
 class User_authentication(Resource):
 
@@ -828,6 +828,7 @@ class User_profiles(Resource):
             resp = unsupported_media_type()
         else:
             try:
+                a = request
                 request_body = request.get_json(force = True)                           #Get and transform request body in JSON
                 template_data = request_body["template"]["data"]                        #Get data element of template
 
@@ -862,12 +863,12 @@ class User_profiles(Resource):
                             else:
                                 new_user["prof_picture_id"] = prof_picture_id
 
-                                new_user_id = g.con.create_user(new_user)
-                                if new_user_id is None:
-                                    resp = internal_server_error()
-                                else:
-                                    new_url = api.url_for(User_profile, user_id = new_user_id)
-                                    resp = Response(status = 201, headers = {"Location" : new_url})
+                        new_user_id = g.con.create_user(new_user)
+                        if new_user_id is None:
+                            resp = internal_server_error()
+                        else:
+                            new_url = api.url_for(User_profile, user_id = new_user_id)
+                            resp = Response(status = 201, headers = {"Location" : new_url})
             except Exception, e:
                 resp = bad_request(parameter_name = "Profile picture id, user age or user gender")
         return resp

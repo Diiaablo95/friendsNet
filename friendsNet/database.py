@@ -1762,8 +1762,8 @@ class Connection(object):
             for row in rows:
                 if comments is None:
                     comments = []
-            comment_object = self._create_comment_object(row)
-            comments.append(comment_object)
+                comment_object = self._create_comment_object(row)
+                comments.append(comment_object)
         cur.close()
         return comments
     
